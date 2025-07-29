@@ -18,14 +18,17 @@
 <link rel="stylesheet" href="http//cdn.mobimedical.cn/source/common/css/plugin.css">
 </head>
 <body>
- <div>
-    <label for="jsonInput">Enter JSON Data:</label>
-    <textarea id="jsonInput" rows="4" cols="50">{"code":200,"msg":"","data":{"jsApiParameters":"{\"appId\":\"wxfdd02a5bec574795\",\"nonceStr\":\"iizj3pahqmvip60kghru5qm7fblclb1j\",\"package\":\"prepay_id=wx290801215403930eaac37dd6cee1a40001\",\"signType\":\"MD5\",\"timeStamp\":\"1753747281\",\"paySign\":\"69A7455984E2103C755AA502E4F7E805\"}","regId":143701130}}</textarea>
-    <br>
-    <button onclick="onCreateOrder()">Create Order</button>
-</div>
     
-    
+
+  <div class="container">
+        <h1>微信支付测试工具</h1>
+        <p>请粘贴支付数据JSON:</p>
+        <textarea id="jsonInput" placeholder='{"code":200,"msg":"","data":{"jsApiParameters":"{\"appId\":\"wxfdd02a5bec574795\",...}","regId":143701128}}'></textarea>
+        <button onclick="onCreateOrder()">Create Order</button>
+        <div id="errorMsg" class="error"></div>
+    </div>	
+
+	
 <script>  
     var isUpdate = "1";
     var verifySwitch = "1";
